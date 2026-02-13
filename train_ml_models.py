@@ -1,15 +1,8 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[19]:
-
-
 import os
 os.makedirs("model", exist_ok=True)
-
-
-# In[20]:
-
 
 import pandas as pd
 
@@ -31,9 +24,6 @@ df = pd.read_csv(
 df.to_csv("adult.csv", index=False)
 
 print("CSV file created successfully!")
-
-
-# In[21]:
 
 
 import numpy as np
@@ -61,10 +51,6 @@ from sklearn.metrics import (
     f1_score,
     matthews_corrcoef
 )
-
-
-# In[22]:
-
 
 # Load dataset
 df = pd.read_csv("adult.csv")
@@ -95,10 +81,6 @@ y = df["income"]
 num_cols = X.select_dtypes(include=["int64"]).columns
 cat_cols = X.select_dtypes(include=["object"]).columns
 
-
-# In[23]:
-
-
 # Preprocessing (IMPORTANT: Dense output)
 preprocessor = ColumnTransformer([
     ("num", StandardScaler(), num_cols),
@@ -109,10 +91,6 @@ preprocessor = ColumnTransformer([
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.2, random_state=42
 )
-
-
-# In[24]:
-
 
 # Fit and transform
 X_train_p = preprocessor.fit_transform(X_train)
@@ -156,16 +134,6 @@ results_df = pd.DataFrame(results, columns=[
 ])
 print("\nModel Performance:")
 print(results_df)
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
 
 
 
