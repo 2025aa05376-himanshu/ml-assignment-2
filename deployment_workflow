@@ -1,0 +1,111 @@
+🔥 STEP 1 — Train the Model Locally
+
+Inside your project folder:
+
+ml-assignment-2/
+│
+├── train_ml_models.py
+├── streamlit_app.py
+├── adult.csv
+├── model/
+
+▶ Run Training Script
+
+Open terminal inside project folder:
+
+cd C:\Users\himanshu\Documents\ML\ml-assignment-2
+python train_ml_models.py
+
+If successful, it will generate:
+
+model/
+│
+├── logistic.pkl
+├── decision_tree.pkl
+├── knn.pkl
+├── naive_bayes.pkl
+├── random_forest.pkl
+├── xgboost.pkl
+├── preprocessor.pkl
+
+If these files exist → ✅ Training done.
+
+🔥 STEP 2 — Test App Locally
+
+Before pushing to GitHub, ALWAYS test locally:
+
+streamlit run streamlit_app.py
+
+If it opens in browser and works → ✅ Ready for deployment.
+
+🔥 STEP 3 — Prepare GitHub Repository
+
+Make sure your folder contains:
+
+streamlit_app.py
+train_ml_models.py
+requirements.txt
+model/ (with all .pkl files)
+
+✅ Create requirements.txt
+
+If not created:
+
+pip freeze > requirements.txt
+
+OR manually create:
+
+streamlit
+pandas
+numpy
+scikit-learn
+matplotlib
+joblib
+xgboost
+
+🔥 STEP 4 — Push to GitHub
+
+If first time:
+
+git add .
+git commit -m "Final ML project"
+git push origin main
+
+
+If you get pull error:
+
+git pull origin main --allow-unrelated-histories
+git push
+
+
+After push, check your repo online.
+
+You must see:
+
+model/
+streamlit_app.py
+requirements.txt
+
+🚀 STEP 5 — Deploy on Streamlit Cloud
+
+Now the IMPORTANT part.
+
+🌐 Go To:
+
+👉 https://share.streamlit.io
+
+Login with GitHub.
+
+Click:
+
+New App
+
+Fill Details:
+
+Repository: ml-assignment-2
+
+Branch: main
+
+Main file path: streamlit_app.py
+
+Click Deploy
