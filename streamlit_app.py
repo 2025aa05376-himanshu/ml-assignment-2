@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[9]:
-
-
 import os
 import streamlit as st
 import pandas as pd
@@ -116,10 +113,4 @@ if uploaded_file:
 
         st.subheader("Classification Report")
         st.text(classification_report(y_true, y_pred))
-
-
-# In[ ]:
-
-
-
 
