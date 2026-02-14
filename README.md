@@ -20,7 +20,7 @@ BITS Pilani – WILP M.Tech (AIML - 2025aa05376)
 
 	Type of Problem: Binary Classification
 
-	The dataset contains both numerical and categorical attributes describing an individual's education level, occupation, working hours, marital status, and other     socio-economic characteristics.
+	The dataset contains both numerical and categorical attributes describing an individual's education level, occupation, working hours, marital status, and      other socio-economic characteristics.
 
 4. Data Preprocessing Steps
    
@@ -68,7 +68,7 @@ BITS Pilani – WILP M.Tech (AIML - 2025aa05376)
 
 10. Model Comparison Table
 
-	Model					Accuracy	AUC	Precision	Recall	F1	MCC
+	Model					 Accuracy	 AUC	Precision	Recall	F1	MCC
 
 	Logistic Regression
 						
